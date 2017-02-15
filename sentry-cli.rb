@@ -2,8 +2,8 @@ class SentryCli < Formula
   desc "This is a Sentry command-line client for some generic tasks."
   homepage "https://github.com/getsentry/sentry-cli"
   url "https://github.com/getsentry/sentry-cli/releases/download/0.24.0/sentry-cli-Darwin-x86_64"
-  version "0.24.0"
-  sha256 "eac9c2d127111b6c6036ab1596a8fe4d186d6feb52d95a433d9018f9c288e5ca"
+  version "0.25.0"
+  sha256 "3162b500173ba6a20d9563ec7dce199625e7dbc637eccc44304af3a8b13f4569"
 
   def install
     mv "sentry-cli-Darwin-x86_64", "sentry-cli"
