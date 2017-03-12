@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 import os
 import sys
-import urlparse
 import requests
 import hashlib
 import jinja2
+
 
 try:
     from requests.packages import urllib3
@@ -13,15 +13,9 @@ except ImportError:
     pass
 
 
-AUTH_USERNAME = 'getsentry-bot'
-AUTH_TOKEN = os.environ['GITHUB_AUTH_TOKEN']
-AUTH = (AUTH_USERNAME, AUTH_TOKEN)
 REPO = 'getsentry/sentry-cli'
+BIN = 'sentry-cli-Darwin-x86_64'
 
-def api_request(method, path, **kwargs):
-    url = urlparse.urljoin('https://api.github.com/', path.lstrip('/'))
-    # default travis python does not have SNI
-    return requests.request(method, url, auth=AUTH, verify=False, **kwargs)
 
 def sha256_checksum(filename, block_size=65536):
     sha256 = hashlib.sha256()
@@ -30,11 +24,13 @@ def sha256_checksum(filename, block_size=65536):
             sha256.update(block)
     return sha256.hexdigest()
 
+
 def render(tpl_path, context):
     path, filename = os.path.split(tpl_path)
     return jinja2.Environment(
         loader=jinja2.FileSystemLoader(path or './')
     ).get_template(filename).render(context)
+
 
 def download_file(url):
     local_filename = url.split('/')[-1]
@@ -45,8 +41,9 @@ def download_file(url):
                 f.write(chunk)
     return local_filename
 
+
 def main():
-    resp = api_request('GET', 'repos/%s/releases/latest' % REPO)
+    resp = requests.get('https://api.github.com/repos/%s/releases/latest' % REPO)
     resp.raise_for_status()
     release = resp.json()
     url = None
@@ -54,7 +51,7 @@ def main():
     if release['draft'] is False:
         version = release['tag_name']
         for asset in release['assets']:
-            if asset['name'] == 'sentry-cli-Darwin-x86_64':
+            if asset['name'] == BIN:
                 url = asset['browser_download_url']
                 break
 
