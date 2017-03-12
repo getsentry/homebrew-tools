@@ -15,7 +15,7 @@ except ImportError:
 
 REPO = 'getsentry/sentry-cli'
 BIN = 'sentry-cli-Darwin-x86_64'
-
+FORMULA = 'sentry-cli.rb'
 
 def sha256_checksum(filename, block_size=65536):
     sha256 = hashlib.sha256()
@@ -64,7 +64,8 @@ def main():
         'checksum': checksum
     }
     result = render('./.ci/templates/sentry-cli.rb.template', context)
-
+    with open(FORMULA, 'w') as formula:
+        formula.write(result + '\n')
 
 if __name__ == '__main__':
     main()
