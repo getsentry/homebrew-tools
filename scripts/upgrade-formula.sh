@@ -1,7 +1,9 @@
 #!/bin/bash
 
-#pip install --user requests==2.10.0
-pip install requests==2.10.0
-pip install jinja
+if [ ! -d .venv ]; then
+  virtualenv .venv
+  .venv/bin/pip install requests==2.10.0
+  .venv/bin/pip install Jinja2
+fi
 
-python ./scripts/bump-formula.py
+.venv/bin/python ./scripts/bump-formula.py
