@@ -6,4 +6,4 @@ Sentry's homebrew collection
 
 Call:
 
-`./script/upgrade-formula.sh`
+`./scripts/upgrade-formula.sh`
