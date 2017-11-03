@@ -1,9 +1,4 @@
 # homebrew-tools
 
-Sentry's homebrew collection
+Sentry's homebrew collection, maintained by [probot-release](https://github.com/getsentry/probot-release).
 
-# Update sentry-cli
-
-Call:
-
-`./scripts/upgrade-formula.sh`
