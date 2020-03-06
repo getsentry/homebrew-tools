@@ -15,7 +15,7 @@ class SentryCli < Formula
   end
 
   def install
-    bin.install Dir["*"].first => "sentry-cli"
+    bin.install Dir["sentry-cli-*"].first => "sentry-cli"
   end
 
   test do
