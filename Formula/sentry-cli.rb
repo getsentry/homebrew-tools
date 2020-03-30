@@ -1,17 +1,17 @@
 class SentryCli < Formula
   desc "Sentry command-line client for some generic tasks"
   homepage "https://github.com/getsentry/sentry-cli"
-  version "1.52.0"
+  version "1.52.1"
 
   if OS.mac?
-    url "https://downloads.sentry-cdn.com/sentry-cli/1.52.0/sentry-cli-Darwin-x86_64"
-    sha256 "97c9bafbcf87bd7dea4f1069fe18f8e8265de6f7eab20c62ca9299e0fa8c2af6"
+    url "https://downloads.sentry-cdn.com/sentry-cli/1.52.1/sentry-cli-Darwin-x86_64"
+    sha256 "7b80543171870d5970cec15984173503c70012c02fc90c3cc17fa4f58e3a2103"
   elsif Hardware::CPU.is_64_bit?
-    url "https://downloads.sentry-cdn.com/sentry-cli/1.52.0/sentry-cli-Linux-x86_64"
-    sha256 "d6aeb45efbcdd3ec780f714b5082046ea1db31ff60ed0fc39916bbc8b6d708be"
+    url "https://downloads.sentry-cdn.com/sentry-cli/1.52.1/sentry-cli-Linux-x86_64"
+    sha256 "e3ed0608c4a8329e2e2037b4e25436be9ad1552a35035e4fe98e7207e5d2650c"
   else
-    url "https://downloads.sentry-cdn.com/sentry-cli/1.52.0/sentry-cli-Linux-i686"
-    sha256 "b0dca09ef68c3f8399b0be228691bc4060922a27c7bb85c1cf44f95ab93dbc5e"
+    url "https://downloads.sentry-cdn.com/sentry-cli/1.52.1/sentry-cli-Linux-i686"
+    sha256 "260b7cb4f9d1c26cfea541359593ef46bab06f07a3cad30202f126fda3e878e5"
   end
 
   def install
