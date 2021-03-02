@@ -1,28 +1,28 @@
 class SentryCli < Formula
   desc "Sentry command-line client for some generic tasks"
   homepage "https://github.com/getsentry/sentry-cli"
-  version "1.63.0"
+  version "1.63.1"
   license "BSD-3-Clause"
 
   if OS.mac?
-    url "https://downloads.sentry-cdn.com/sentry-cli/1.63.0/sentry-cli-Darwin-universal"
-    sha256 "5e6aa63d56805e5b8c53c481d67ea84e9c7c1d416b159ff0c50062368f78f638"
+    url "https://downloads.sentry-cdn.com/sentry-cli/1.63.1/sentry-cli-Darwin-universal"
+    sha256 "0c1ac3dc993a4aa169d49a989ce35bdfc4c463339652a2d3e44aef17c03fa976"
   elsif OS.linux?
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.sentry-cdn.com/sentry-cli/1.63.0/sentry-cli-Linux-aarch64"
-        sha256 "c922abae3281c8a6c90cf434593ac2d2d4fad4daf823bd1580b11888c1e4650f"
+        url "https://downloads.sentry-cdn.com/sentry-cli/1.63.1/sentry-cli-Linux-aarch64"
+        sha256 "76dacbc3cdda57257ccd1e9bb35d201c6c22bb3d25f2e92183f111d956960e94"
       else
-        url "https://downloads.sentry-cdn.com/sentry-cli/1.63.0/sentry-cli-Linux-armv7"
-        sha256 "7d8398c8f6079499408743155015fb5da3f1848a25aa630513e5c756eef266a4"
+        url "https://downloads.sentry-cdn.com/sentry-cli/1.63.1/sentry-cli-Linux-armv7"
+        sha256 "22bc172de2e5323f8e7d038ee117e1e77e8c2aed685dc983eefee9ab4d0b476f"
       end
     elseif Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.sentry-cdn.com/sentry-cli/1.63.0/sentry-cli-Linux-x86_64"
-        sha256 "aa19e3c4138c910409a1e1b17a5ff9c57e3d6d03a338be1821603ff9b898898a"
+        url "https://downloads.sentry-cdn.com/sentry-cli/1.63.1/sentry-cli-Linux-x86_64"
+        sha256 "55701a409dea593d48b560a6444a4216ecfa43f853428f4df1c1c89f32f5f9a0"
       else
-        url "https://downloads.sentry-cdn.com/sentry-cli/1.63.0/sentry-cli-Linux-i686"
-        sha256 "e98496b1e1eb211d4a3e949ae505845135c8c2ad9d6fe8824e50af139a4be2a4"
+        url "https://downloads.sentry-cdn.com/sentry-cli/1.63.1/sentry-cli-Linux-i686"
+        sha256 "18060660a00dc19a32367e6e05cb295cf58f99aaf6cb97875a5b5bc5b22ebe94"
       end
     else
       raise "Unsupported architecture"
