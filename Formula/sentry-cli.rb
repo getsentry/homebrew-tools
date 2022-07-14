@@ -1,27 +1,27 @@
 class SentryCli < Formula
   desc "Sentry command-line client for some generic tasks"
   homepage "https://github.com/getsentry/sentry-cli"
-  version "2.4.0"
+  version "2.4.1"
   license "BSD-3-Clause"
   if OS.mac?
-    url "https://downloads.sentry-cdn.com/sentry-cli/2.4.0/sentry-cli-Darwin-universal"
-    sha256 "f7cd6887521f0a1c91fb8358cbc1a8077b46294f92818627499c8ca73ed0a082"
+    url "https://downloads.sentry-cdn.com/sentry-cli/2.4.1/sentry-cli-Darwin-universal"
+    sha256 "bc0c6198ddb0bcc4da7525e36876c205b7f9baaa7e7a2f5bb4ec6a553b065773"
   elsif OS.linux?
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.4.0/sentry-cli-Linux-aarch64"
-        sha256 "9b5a1a37ea70f35fba96dd6ce73c28edec91dcabc9e091da0589b185f536d57e"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.4.1/sentry-cli-Linux-aarch64"
+        sha256 "d47b685a8eaca45fd9ca28c4d7fd182fa2c1b475d7617558ddf744033ee0a86b"
       else
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.4.0/sentry-cli-Linux-armv7"
-        sha256 "36dbae09800d7abab953945d969ccefda23d73a1c03a95501831582e5bcaaa14"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.4.1/sentry-cli-Linux-armv7"
+        sha256 "07b73382dda9c4680e99806123ba6af9dfedac5419ef44f2c2318481bc0ace77"
       end
     elseif Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.4.0/sentry-cli-Linux-x86_64"
-        sha256 "361329221eb6d1047b1889e8b66b3553d8689a605fa384bf31fbb3f756083106"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.4.1/sentry-cli-Linux-x86_64"
+        sha256 "2ce1ce0cc3bec9ab945be807df15697f618c737e12d67e935c8a45bd26117340"
       else
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.4.0/sentry-cli-Linux-i686"
-        sha256 "ea2601cdf5eda821388c9445b945903201f63d6468dad620d9039a8c40c38e5a"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.4.1/sentry-cli-Linux-i686"
+        sha256 "dd296e660d5412db80a46d5d68acd3d4122d7f3503da626cda01f6191ce1a908"
       end
     else
       raise "Unsupported architecture"
