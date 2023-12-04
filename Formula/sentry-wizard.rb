@@ -2,9 +2,9 @@ require 'language/node'
 class SentryWizard < Formula
   desc "The Sentry Wizard helps you set up your projects with Sentry"
   homepage "https://github.com/getsentry/sentry-wizard"
-  url "https://registry.npmjs.org/@sentry/wizard/-/wizard-3.18.0.tgz"
-  sha256 "7648e6f5ed2f114316df6b5db5facb5751d29397902a787133505c1d8a51bc40"
-  version "3.18.0"
+  url "https://registry.npmjs.org/@sentry/wizard/-/wizard-3.18.1.tgz"
+  sha256 "ed6423645e9dc8741fdbdbfea0e2084da96bb97621511108b1586bad68ab9f75"
+  version "3.18.1"
   license "MIT"
 
   depends_on "node"
