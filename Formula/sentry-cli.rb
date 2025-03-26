@@ -1,27 +1,27 @@
 class SentryCli < Formula
   desc "Sentry command-line client for some generic tasks"
   homepage "https://github.com/getsentry/sentry-cli"
-  version "2.42.5-alpha"
+  version "2.42.5"
   license "BSD-3-Clause"
   if OS.mac?
-    url "https://downloads.sentry-cdn.com/sentry-cli/2.42.5-alpha/sentry-cli-Darwin-universal"
-    sha256 "75897bd9454eab515af4c6d5755b3129bff61dce6f1cd65c4beda8bbfb4c2f09"
+    url "https://downloads.sentry-cdn.com/sentry-cli/2.42.5/sentry-cli-Darwin-universal"
+    sha256 "4226fb582bd4551dfabf4d58b0713cc66825e6fd8071e9f59c2604373b28048c"
   elsif OS.linux?
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.42.5-alpha/sentry-cli-Linux-aarch64"
-        sha256 "45443b5d81d7e3b15649cfb2d16425ef3f3a4517177c8f5dc91b3319f5afb500"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.42.5/sentry-cli-Linux-aarch64"
+        sha256 "2d4f9df6e567ffaf90aab1a6dd892b1ba9fd580edd8b9ffe7d8484e5530263eb"
       else
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.42.5-alpha/sentry-cli-Linux-armv7"
-        sha256 "0517c29c0ce867036651b538b6153ca7b5102b2270226f5fbec6b4aef802d30d"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.42.5/sentry-cli-Linux-armv7"
+        sha256 "79ecfd56f0153e87ca3d4adf68d759d449c2e9af3593a26fd2151d3cf4b98bb3"
       end
     elseif Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.42.5-alpha/sentry-cli-Linux-x86_64"
-        sha256 "684359e6bce735f6be6ab5059aea8549ffbe789fa5daf924137f3e90e316c0b1"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.42.5/sentry-cli-Linux-x86_64"
+        sha256 "ece674996d051b3d236bb3b3e2ae4c315d0aa55373fa3bcde2d6d474b7c6ba96"
       else
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.42.5-alpha/sentry-cli-Linux-i686"
-        sha256 "91a6c3eae40558fe66ea8966dc9d176b97cf0e7644c00e2a5ce8d6fe9f118571"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.42.5/sentry-cli-Linux-i686"
+        sha256 "61ea5059835bb2d092afbf3193400270978506102700f5ab12f90c0880efbbb8"
       end
     else
       raise "Unsupported architecture"
