@@ -1,27 +1,27 @@
 class SentryCli < Formula
   desc "Sentry command-line client for some generic tasks"
   homepage "https://github.com/getsentry/sentry-cli"
-  version "2.57.0"
+  version "2.58.0"
   license "BSD-3-Clause"
   if OS.mac?
-    url "https://downloads.sentry-cdn.com/sentry-cli/2.57.0/sentry-cli-Darwin-universal"
-    sha256 "e5d890e92b5cef66b93898d2d81aad89ed9ec9a962364fd164eff0cef77ef99f"
+    url "https://downloads.sentry-cdn.com/sentry-cli/2.58.0/sentry-cli-Darwin-universal"
+    sha256 "b23b628f2d000898cbc8b323339218134e0856b0dfa2491c0328c09a27b02e69"
   elsif OS.linux?
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.57.0/sentry-cli-Linux-aarch64"
-        sha256 "cb3ce12b59dd6cb5d516a3d3ac07b79d99544856f49ebd88b022851cbba71c2d"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.0/sentry-cli-Linux-aarch64"
+        sha256 "4ee4e5341ae3366a5e629ab7bebe3465f1443e7acc5daa6e808ce2ded0a412ba"
       else
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.57.0/sentry-cli-Linux-armv7"
-        sha256 "7d3acba06f184069418a4fa9d24145d12669786115e51ce66b179943c0e7e6ae"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.0/sentry-cli-Linux-armv7"
+        sha256 "be88fa9943072618f1c3ca785f447a2c1c6dbd800897ad64405bf91bd1af254c"
       end
     elseif Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.57.0/sentry-cli-Linux-x86_64"
-        sha256 "c214ddd4b3e1143018c23c040ae347ecba0ed9a0ff4826679bc21d9796e9a96a"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.0/sentry-cli-Linux-x86_64"
+        sha256 "735b266c50b44735167292fef65c5889737f3a4d9f8150937e6d454217ca741d"
       else
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.57.0/sentry-cli-Linux-i686"
-        sha256 "76199ca9c0db562c741b5d6a63d402de1678cbf107e94d181d14e2248600d932"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.0/sentry-cli-Linux-i686"
+        sha256 "cee64604f94c401d3e215dfcb3f5c6292a6ff3df90c3c98d155cbb1da7ed0bc1"
       end
     else
       raise "Unsupported architecture"
