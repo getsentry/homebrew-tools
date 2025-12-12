@@ -1,27 +1,27 @@
 class SentryCli < Formula
   desc "Sentry command-line client for some generic tasks"
   homepage "https://github.com/getsentry/sentry-cli"
-  version "2.58.3"
+  version "2.58.4"
   license "FSL-1.1-MIT"
   if OS.mac?
-    url "https://downloads.sentry-cdn.com/sentry-cli/2.58.3/sentry-cli-Darwin-universal"
-    sha256 "a53c85d540bfe160922d187a45274f0514df087c2a24c6af2bdf57d736405a0e"
+    url "https://downloads.sentry-cdn.com/sentry-cli/2.58.4/sentry-cli-Darwin-universal"
+    sha256 "5a1c1121b45c48504d2ae58af11c743c5663ea8979db3258961838a16cf90c08"
   elsif OS.linux?
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.3/sentry-cli-Linux-aarch64"
-        sha256 "30f95cf10ff96bdbbfdc1a25a7b65ee0a7f906f2c380c0cdde185d14d5535246"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.4/sentry-cli-Linux-aarch64"
+        sha256 "672cb986b0c5d84ef724f39b3aa189be802bceb8bc7dc8c5776a0ca90fcf41bd"
       else
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.3/sentry-cli-Linux-armv7"
-        sha256 "ae2c0ecee950055b388817bdb6dd543730c36d6def8794252c00314c3f0a7e18"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.4/sentry-cli-Linux-armv7"
+        sha256 "e8df469ae35f6d8cd788fe2967c5420633bb09348ad09953d5176615cf1bead0"
       end
     elseif Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.3/sentry-cli-Linux-x86_64"
-        sha256 "645e64af49e68a285b66d7ddf440d06b76f8a5603797060f61c0c487ac7e2a89"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.4/sentry-cli-Linux-x86_64"
+        sha256 "a4932b4315b192b3d037678a16eb2a5a8731609f671fc4008e643b85c3c74cb6"
       else
-        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.3/sentry-cli-Linux-i686"
-        sha256 "4a36158a3140a26e1e8fbbb72f80a836df3f49ebcb5787e05b360e0f9ee01b3c"
+        url "https://downloads.sentry-cdn.com/sentry-cli/2.58.4/sentry-cli-Linux-i686"
+        sha256 "1b05efec7bc2ebf4dca8f3e6ededa8ffedf8ee2dd49e23d434a20885bc9a50cf"
       end
     else
       raise "Unsupported architecture"
