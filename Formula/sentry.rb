@@ -1,26 +1,26 @@
 class Sentry < Formula
   desc "Sentry command-line tool for error monitoring and debugging"
   homepage "https://cli.sentry.dev"
-  version "0.12.0"
+  version "0.13.0"
   license "FSL-1.1-MIT"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getsentry/cli/releases/download/0.12.0/sentry-darwin-arm64.gz"
-      sha256 "8bfc9539c7f9601e719bd1f288df10502bb68c31c8e92112cf0728ee5ddab47f"
+      url "https://github.com/getsentry/cli/releases/download/0.13.0/sentry-darwin-arm64.gz"
+      sha256 "0d6002fd4380bcf38192e855b50f0a71436d7aa277b7ed835053fb77cdc695b5"
     elsif Hardware::CPU.intel?
-      url "https://github.com/getsentry/cli/releases/download/0.12.0/sentry-darwin-x64.gz"
-      sha256 "238ef8117db325ab0c39a2039e67dd4efb5e886be4415301b0b3179f870251e4"
+      url "https://github.com/getsentry/cli/releases/download/0.13.0/sentry-darwin-x64.gz"
+      sha256 "f008fb24c415b14b8f54eb135c533dcca333f3edc7edf6d52bd2d4e527b58180"
     else
       raise "Unsupported macOS CPU architecture: #{Hardware::CPU.type}"
     end
   elsif OS.linux?
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsentry/cli/releases/download/0.12.0/sentry-linux-arm64.gz"
-      sha256 "47ecbe793d37b62ac49bab08df40d5c3e27df2f2b6f2c08093c5a5eaac3d8daf"
+      url "https://github.com/getsentry/cli/releases/download/0.13.0/sentry-linux-arm64.gz"
+      sha256 "f7c9863ad0bf419bcfe65956fa9c276a33356cf9128a2c4f791e6bbb79c89ce8"
     elsif Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsentry/cli/releases/download/0.12.0/sentry-linux-x64.gz"
-      sha256 "66490a04184e90366f692bb1010242a434ea15aa74142d75223b2ac694a333ad"
+      url "https://github.com/getsentry/cli/releases/download/0.13.0/sentry-linux-x64.gz"
+      sha256 "ec9510df82ba4efc133a7282387b1040a06010b3755ffe413c496f58fa13a358"
     else
       raise "Unsupported Linux CPU architecture: #{Hardware::CPU.type} (only 64-bit arm and x86_64 are supported)"
     end
