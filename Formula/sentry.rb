@@ -1,26 +1,26 @@
 class Sentry < Formula
   desc "Sentry command-line tool for error monitoring and debugging"
   homepage "https://cli.sentry.dev"
-  version "0.41.0"
-  license "FSL-1.1-MIT"
+  version "0.42.0"
+  license "FSL-1.1-Apache-2.0"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getsentry/cli/releases/download/0.41.0/sentry-darwin-arm64.gz"
-      sha256 "e9ae37dfee727c5b13401c4f6745d45d3678018c1ab03d9e09e16f69e23e0439"
+      url "https://github.com/getsentry/cli/releases/download/0.42.0/sentry-darwin-arm64.gz"
+      sha256 "3008dc007e62215abaa0e6acd52d8ca18e5e477634826ad7ff08c3ec05f66115"
     elsif Hardware::CPU.intel?
-      url "https://github.com/getsentry/cli/releases/download/0.41.0/sentry-darwin-x64.gz"
-      sha256 "a6866f73e3fa8399e82e63a19aa0b1fe94048e0f01729bbd88504cddb39a45a3"
+      url "https://github.com/getsentry/cli/releases/download/0.42.0/sentry-darwin-x64.gz"
+      sha256 "0eb94fc899e63191e59985fa0da271ccda4067d0ab95a39b7ca84fddd965dbbf"
     else
       raise "Unsupported macOS CPU architecture: #{Hardware::CPU.type}"
     end
   elsif OS.linux?
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsentry/cli/releases/download/0.41.0/sentry-linux-arm64.gz"
-      sha256 "fb9286752fc23cb467cacf5cf0cd9f7a3a9fc4bfb33bd157694cb947908c9fa7"
+      url "https://github.com/getsentry/cli/releases/download/0.42.0/sentry-linux-arm64.gz"
+      sha256 "ab4e9e86c98cd6ef60aae44d134f2210f949f2f3819da74bb3c7643ae6bfc974"
     elsif Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsentry/cli/releases/download/0.41.0/sentry-linux-x64.gz"
-      sha256 "d555a8647b8c7016b7642b4b968fff2789c0c82968c8f029cb82925b868930d1"
+      url "https://github.com/getsentry/cli/releases/download/0.42.0/sentry-linux-x64.gz"
+      sha256 "196f8851032d5d64781571032798fa9df19d8817ce4169bcae51cb4c258e7b30"
     else
       raise "Unsupported Linux CPU architecture: #{Hardware::CPU.type} (only 64-bit arm and x86_64 are supported)"
     end
