@@ -1,27 +1,27 @@
 class Craft < Formula
   desc "Universal release tool"
   homepage "https://craft.sentry.dev"
-  version "3.10.0"
+  version "3.11.0"
   license "MIT"
   depends_on "git"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getsentry/craft/releases/download/3.10.0/craft-darwin-arm64.gz"
-      sha256 "6b9bf644d1e218be6ee00c5c5ae95238cff36c2dd14073f3459b649e515a510d"
+      url "https://github.com/getsentry/craft/releases/download/3.11.0/craft-darwin-arm64.gz"
+      sha256 "fdc69d8201687d45108bf214aea83ee4ce7578e4aa4dfa70fed682a975d147f4"
     elsif Hardware::CPU.intel?
-      url "https://github.com/getsentry/craft/releases/download/3.10.0/craft-darwin-x64.gz"
-      sha256 "a371aff85e461ae99c859b9320f077da8bc82c8a55124798336be8430bfa9e88"
+      url "https://github.com/getsentry/craft/releases/download/3.11.0/craft-darwin-x64.gz"
+      sha256 "d5856cce4bbf15c68490c1b746527047da69669d94ab065db7a6031bb59d4ed7"
     else
       raise "Unsupported macOS CPU architecture"
     end
   elsif OS.linux?
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsentry/craft/releases/download/3.10.0/craft-linux-arm64.gz"
-      sha256 "ef907575b0dd47476dec160bf61461381d4b0848d9538218e771eb09b4001d73"
+      url "https://github.com/getsentry/craft/releases/download/3.11.0/craft-linux-arm64.gz"
+      sha256 "129c602595f4f4aec1f6de1816bd8b229884e49ca8d1f17cea364ac344d5dbda"
     elsif Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsentry/craft/releases/download/3.10.0/craft-linux-x64.gz"
-      sha256 "57d70d73e9815303a892c343b3fc0207f3fd0ecb4c857ffc91cffc6c4b40227c"
+      url "https://github.com/getsentry/craft/releases/download/3.11.0/craft-linux-x64.gz"
+      sha256 "a43b272ec2ecc08f2a3f799b1c6ad19b7d295149569ddd60fb8cc30416377938"
     else
       raise "Unsupported Linux CPU architecture"
     end
