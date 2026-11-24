@@ -1,26 +1,26 @@
 class Sentry < Formula
   desc "Sentry command-line tool for error monitoring and debugging"
   homepage "https://cli.sentry.dev"
-  version "0.50.0"
+  version "0.51.0"
   license "FSL-1.1-Apache-2.0"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/getsentry/toolkit/releases/download/cli@0.50.0/sentry-darwin-arm64.gz"
-      sha256 "0b0e857366a5676c452ad93c57e3d86dff828e3189f24c65caf3d89517312692"
+      url "https://github.com/getsentry/toolkit/releases/download/cli@0.51.0/sentry-darwin-arm64.gz"
+      sha256 "44cf1f958d59b97c7bd8bbc43ad53ea670099cfe6a19f82a140c54638e7acf9a"
     elsif Hardware::CPU.intel?
-      url "https://github.com/getsentry/toolkit/releases/download/cli@0.50.0/sentry-darwin-x64.gz"
-      sha256 "14b8eef50cfb9f22ac5feef4e90a4d85b320eaaa3807fc3e117b42a583cc0249"
+      url "https://github.com/getsentry/toolkit/releases/download/cli@0.51.0/sentry-darwin-x64.gz"
+      sha256 "08aca13a263eb57ca2dc06f0c790f4228b185da33c2804ed21352292c67d3ecf"
     else
       raise "Unsupported macOS CPU architecture: #{Hardware::CPU.type}"
     end
   elsif OS.linux?
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsentry/toolkit/releases/download/cli@0.50.0/sentry-linux-arm64.gz"
-      sha256 "e8a2afda8cb644ae1b410029121fe89f06da039835769ee81a1d171bb5459999"
+      url "https://github.com/getsentry/toolkit/releases/download/cli@0.51.0/sentry-linux-arm64.gz"
+      sha256 "5d51f8aac2d372ddbe52297fdd7eb0bfd8757a8a0f99a53a4860a1ac6dcd3637"
     elsif Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsentry/toolkit/releases/download/cli@0.50.0/sentry-linux-x64.gz"
-      sha256 "acbc613130f9dbf6341d1f334594b81946253d8ff9281ae877985f243aa163aa"
+      url "https://github.com/getsentry/toolkit/releases/download/cli@0.51.0/sentry-linux-x64.gz"
+      sha256 "6a29c3f4147f213e276003927a30d05cbb64dd5ee9d87b487debc38df9354b80"
     else
       raise "Unsupported Linux CPU architecture: #{Hardware::CPU.type} (only 64-bit arm and x86_64 are supported)"
     end
